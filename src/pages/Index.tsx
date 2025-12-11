@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
-type Platform = 'all' | 'pc' | 'playstation' | 'xbox' | 'mobile';
+type Platform = 'all' | 'pc' | 'mobile';
 
 interface Service {
   id: number;
@@ -25,7 +25,7 @@ const services: Service[] = [
     price: 1999,
     rating: 4.9,
     reviews: 234,
-    platforms: ['pc', 'playstation', 'xbox'],
+    platforms: ['pc'],
     image: '/placeholder.svg',
     category: 'Услуги',
     badge: 'Хит'
@@ -47,7 +47,7 @@ const services: Service[] = [
     price: 499,
     rating: 5.0,
     reviews: 512,
-    platforms: ['pc', 'playstation', 'xbox', 'mobile'],
+    platforms: ['pc', 'mobile'],
     image: '/placeholder.svg',
     category: 'Валюта'
   },
@@ -57,7 +57,7 @@ const services: Service[] = [
     price: 1499,
     rating: 4.7,
     reviews: 156,
-    platforms: ['pc', 'playstation', 'xbox'],
+    platforms: ['pc'],
     image: '/placeholder.svg',
     category: 'Услуги'
   },
@@ -78,7 +78,7 @@ const services: Service[] = [
     price: 3499,
     rating: 4.8,
     reviews: 98,
-    platforms: ['pc', 'playstation', 'xbox'],
+    platforms: ['pc'],
     image: '/placeholder.svg',
     category: 'Наборы'
   }
@@ -105,8 +105,6 @@ const Index = () => {
 
   const platformIcons = {
     pc: 'Monitor',
-    playstation: 'Gamepad2',
-    xbox: 'Gamepad',
     mobile: 'Smartphone'
   };
 
@@ -167,7 +165,7 @@ const Index = () => {
               >
                 Все платформы
               </Button>
-              {(['pc', 'playstation', 'xbox', 'mobile'] as Platform[]).map((platform) => (
+              {(['pc', 'mobile'] as Platform[]).map((platform) => (
                 <Button
                   key={platform}
                   variant={selectedPlatform === platform ? 'default' : 'outline'}
@@ -176,8 +174,6 @@ const Index = () => {
                 >
                   <Icon name={platformIcons[platform]} className="mr-2" size={18} />
                   {platform === 'pc' && 'PC'}
-                  {platform === 'playstation' && 'PlayStation'}
-                  {platform === 'xbox' && 'Xbox'}
                   {platform === 'mobile' && 'Mobile'}
                 </Button>
               ))}
@@ -358,8 +354,7 @@ const Index = () => {
                     <p className="text-sm text-muted-foreground mb-1">Платформы</p>
                     <div className="flex gap-2 mt-2">
                       <Badge variant="secondary">PC</Badge>
-                      <Badge variant="secondary">PlayStation</Badge>
-                      <Badge variant="secondary">Xbox</Badge>
+                      <Badge variant="secondary">Mobile</Badge>
                     </div>
                   </div>
                   <Button className="w-full mt-6 bg-primary hover:bg-primary/90">
