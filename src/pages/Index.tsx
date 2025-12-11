@@ -21,66 +21,45 @@ interface Service {
 const services: Service[] = [
   {
     id: 1,
-    title: 'Прокачка аккаунта',
-    price: 1999,
-    rating: 4.9,
-    reviews: 234,
-    platforms: ['pc'],
+    title: 'Создание аккаунта',
+    price: 30,
+    rating: 5.0,
+    reviews: 156,
+    platforms: ['pc', 'mobile'],
     image: '/placeholder.svg',
-    category: 'Услуги',
-    badge: 'Хит'
+    category: 'Аккаунты',
+    badge: 'Популярно'
   },
   {
     id: 2,
-    title: 'Буст рейтинга',
-    price: 2499,
-    rating: 4.8,
-    reviews: 189,
-    platforms: ['pc', 'mobile'],
+    title: 'Создание конфига для маркета',
+    price: 40,
+    rating: 4.9,
+    reviews: 89,
+    platforms: ['pc'],
     image: '/placeholder.svg',
-    category: 'Услуги',
-    badge: 'Новое'
+    category: 'Конфиги'
   },
   {
     id: 3,
-    title: 'Внутриигровая валюта',
-    price: 499,
-    rating: 5.0,
-    reviews: 512,
+    title: 'Обработка личных данных на ARIZONA RP',
+    price: 40,
+    rating: 4.8,
+    reviews: 134,
     platforms: ['pc', 'mobile'],
     image: '/placeholder.svg',
-    category: 'Валюта'
-  },
-  {
-    id: 4,
-    title: 'Прохождение кампании',
-    price: 1499,
-    rating: 4.7,
-    reviews: 156,
-    platforms: ['pc'],
-    image: '/placeholder.svg',
-    category: 'Услуги'
-  },
-  {
-    id: 5,
-    title: 'Редкие скины',
-    price: 899,
-    rating: 4.9,
-    reviews: 423,
-    platforms: ['pc', 'mobile'],
-    image: '/placeholder.svg',
-    category: 'Скины',
+    category: 'ARIZONA RP',
     badge: 'Хит'
   },
   {
-    id: 6,
-    title: 'Турнирный набор',
-    price: 3499,
-    rating: 4.8,
-    reviews: 98,
+    id: 4,
+    title: 'Создание сборок',
+    price: 20,
+    rating: 5.0,
+    reviews: 203,
     platforms: ['pc'],
     image: '/placeholder.svg',
-    category: 'Наборы'
+    category: 'Сборки'
   }
 ];
 
